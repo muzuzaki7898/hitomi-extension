@@ -17,8 +17,13 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Setup Gradle
-        uses: gradle/gradle-command-action@v2
+      # Langkah ini akan membuat file gradlew secara otomatis jika belum ada
+      - name: Generate Gradle Wrapper
+        run: gradle wrapper
+
+      # Langkah ini memberikan izin akses eksekusi (executable permission) pada gradlew
+      - name: Make gradlew executable
+        run: chmod +x gradlew
 
       - name: Generate Keystore
         run: |
