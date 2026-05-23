@@ -1,0 +1,22 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'eu.kanade.tachiyomi.extension.all.hitomi'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId 'eu.kanade.tachiyomi.extension.all.hitomi'
+        minSdk 21
+        targetSdk 33
+        versionCode 45
+        versionName '1.4.45'
+    }
+}
+
+dependencies {
+    implementation 'eu.kanade.tachiyomi:extensions-lib:1.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+}
